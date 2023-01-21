@@ -10,21 +10,30 @@ import org.apache.flink.api.java.DataSet;
 import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.operators.DataSource;
 import org.apache.flink.api.java.operators.FlatMapOperator;
+import org.apache.flink.api.java.operators.MapOperator;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.connector.file.src.reader.TextLineInputFormat;
+import org.apache.flink.core.fs.Path;
+import org.apache.flink.shaded.jackson2.org.yaml.snakeyaml.events.StreamEndEvent;
 import org.apache.flink.streaming.api.datastream.DataStream;
+import org.apache.flink.streaming.api.datastream.DataStreamSink;
+import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
+import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.util.Collector;
 import org.apache.flink.connector.file.src.FileSource;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Collections;
+import java.util.stream.Stream;
 
 public class Test {
     static ObjectMapper objectMapper = new ObjectMapper().configure((DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES),false);
 
     public static void main(String[] args) throws Exception {
 
-        final ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
+        //final ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
+        final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
 //        DataSet<String> text = env.fromElements(
 //                "[Hello, My Dataset API Flink Program, This is also a string]");
@@ -40,14 +49,31 @@ public class Test {
 
 
 
-        DataSet<String> jsonDataset = env.readTextFile("file:///mnt/c/Users/anshm/IntellijProjects/flinkTest/sample.json");
+//        DataStream<String> jsonDataset = env.readFile("file:////mnt/c/Users/mpurn/IntellijProjects/src/main/resources/sample.json");
+//        FileSource.forRecordStreamFormat(new TextLineInputFormat(),
+//                "file:////mnt/c/Users/mpurn/IntellijProjects/src/main/resources/sample.json").build();
 
+
+        File file= new File("sample.json");
+        final FileSource<String> source =
+                FileSource.forRecordStreamFormat(new TextLineInputFormat(),Path.fromLocalFile(file))
+                        .build();
+        final DataStream<String> jsonDataStream =
+                env.fromSource(source, WatermarkStrategy.noWatermarks(), "file-source");
 //        DataSet<String> abc = jsonDataset.flatMap(new JsonSplitter());
 //        jsonDataset.print();
 //        abc.print();
 
-        DataSet<TransactionDTO> txnDtoDS = jsonDataset.map(ele -> convertToDTOClass(ele));
-        txnDtoDS.writeAsCsv("file:///mnt/c/Users/anshm/IntellijProjects/flinkTest/sampleDto.csv");
+        DataStream<TransactionDTO> transactionDTODataSet = jsonDataStream.map(Test::convertToTransactionPojo)
+                .map(Test::convertToDTOClass);
+        transactionDTODataSet.print();
+        DataStream<Integer> map = transactionDTODataSet.map(e -> e.getAge());
+        map.print();
+        DataStream<String> transactionDTOStringMapOperator= transactionDTODataSet.map(Test::convertObjToJsonString);
+        // write json to tct file
+        transactionDTOStringMapOperator.writeAsText("file:///mnt/c/Users/mpurn/IntellijProjects/src/main/resources/out.txt");
+        env.execute("test");
+        //txnDtoDS.writeAsCsv("file:///mnt/c/Users/anshm/IntellijProjects/flinkTest/sampleDto.csv");
 
 //        DataSet<String> txnDtoJson = txnDtoDS.map(ele -> convertObjToJson(ele));
 
@@ -60,25 +86,17 @@ public class Test {
 
     }
 
-    public static TransactionDTO convertToDTOClass(String json) throws IOException {
-        Transaction tr = parsejson(json, Transaction.class);
-        TransactionDTO txnDTO = fetchRequiredData(tr);
-        return txnDTO;
+    public static Transaction convertToTransactionPojo(String json) throws IOException {
+        return parsejson(json, Transaction.class);
     }
 
-//    public static
+    public static TransactionDTO convertToDTOClass(Transaction transaction) throws IOException {
+        return fetchRequiredData(transaction);
+    }
 
-    public static String convertObjToJson(TransactionDTO txnDTO) throws JsonProcessingException {
+    public static String convertObjToJsonString(TransactionDTO txnDTO) throws JsonProcessingException {
         ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
-        String transformedJson = ow.writeValueAsString(txnDTO);
-        return transformedJson;
-    }
-
-    public static String transform(String json) throws IOException {
-        Transaction tr = parsejson(json, Transaction.class);
-        TransactionDTO txnDTO = fetchRequiredData(tr);
-        String transformedJson = convertObjToJson(txnDTO);
-        return transformedJson;
+        return ow.writeValueAsString(txnDTO);
     }
 
     public static TransactionDTO fetchRequiredData(Transaction tr){
@@ -88,12 +106,8 @@ public class Test {
         String payer_name = tr.getPayer().getName();
         String enc_payer_name = payer_name.substring(0,1) + String.join("", Collections.nCopies(payer_name.length()-2, "*")) + payer_name.substring(payer_name.length()-1);
         int payer_age = tr.payer.getAge();
-        TransactionDTO txnDto = new TransactionDTO(txn_id,txn_amount,tr_time,enc_payer_name,payer_age);
-        return txnDto;
+        return new TransactionDTO(txn_id,txn_amount,tr_time,enc_payer_name,payer_age);
     }
-
-
-
 
     public static <T> T parsejson(String json, Class<T> clazz) throws IOException {
         if(json != null){
@@ -116,5 +130,11 @@ public class Test {
         public void flatMap(String s, Collector<String> collector) {
             collector.collect(s);
         }
+    }
+
+    public static String transform(String json) throws IOException {
+        Transaction tr = parsejson(json, Transaction.class);
+        TransactionDTO txnDTO = fetchRequiredData(tr);
+        return convertObjToJsonString(txnDTO);
     }
 }
