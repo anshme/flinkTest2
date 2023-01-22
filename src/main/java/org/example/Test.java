@@ -14,10 +14,12 @@ import org.apache.flink.api.java.operators.MapOperator;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.connector.file.src.reader.TextLineInputFormat;
 import org.apache.flink.connector.kafka.sink.KafkaSink;
+import org.apache.flink.connector.kafka.source.KafkaSource;
 import org.apache.flink.core.fs.Path;
 import org.apache.flink.shaded.jackson2.org.yaml.snakeyaml.events.StreamEndEvent;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.datastream.DataStreamSink;
+import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.util.Collector;
@@ -27,7 +29,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.stream.Stream;
-
+import org.apache.flink.core.fs.FileSystem.WriteMode;
 public class Test {
     static ObjectMapper objectMapper = new ObjectMapper().configure((DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES),false);
 
@@ -35,6 +37,8 @@ public class Test {
 
         //final ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        KafkaSource<String> kafkaSource = KafkaConsumer.getKafkaSource("", "", "");
+        DataStream<String> allKafkaMessages = env.fromSource(kafkaSource, WatermarkStrategy.noWatermarks(), "Kafka Source");
 
 //        DataSet<String> text = env.fromElements(
 //                "[Hello, My Dataset API Flink Program, This is also a string]");
@@ -48,43 +52,32 @@ public class Test {
 //        DataSet<String> abc = text.flatMap(new JsonSplitter());
 //        abc.print();
 
-
-
 //        DataStream<String> jsonDataset = env.readFile("file:////mnt/c/Users/mpurn/IntellijProjects/src/main/resources/sample.json");
 //        FileSource.forRecordStreamFormat(new TextLineInputFormat(),
 //                "file:////mnt/c/Users/mpurn/IntellijProjects/src/main/resources/sample.json").build();
-
+//file:///mnt/c/Users/mpurn/IntellijProjects/src/main/resources/
         File file= new File("sample.json");
+        System.out.println(file.getAbsolutePath());
         final FileSource<String> source =
                 FileSource.forRecordStreamFormat(new TextLineInputFormat(),Path.fromLocalFile(file))
                         .build();
         final DataStream<String> jsonDataStream =
                 env.fromSource(source, WatermarkStrategy.noWatermarks(), "file-source");
-//        DataSet<String> abc = jsonDataset.flatMap(new JsonSplitter());
+        DataStream<String> abc = jsonDataStream.flatMap(new JsonSplitter());
+        abc.writeAsText("file:///mnt/c/Users/mpurn/IntellijProjects/src/main/abc.txt",WriteMode.OVERWRITE);
 //        jsonDataset.print();
 //        abc.print();
 
-        DataStream<TransactionDTO> transactionDTODataSet = jsonDataStream.map(Test::convertToTransactionPojo)
-                .map(Test::convertToDTOClass);
-        transactionDTODataSet.print();
-        DataStream<Integer> map = transactionDTODataSet.map(e -> e.getAge());
-        map.print();
-        DataStream<String> transactionDTOStringMapOperator= transactionDTODataSet.map(Test::convertObjToJsonString);
-        // write json to tct file
-//        transactionDTOStringMapOperator.writeAsText
-//                ("file:///mnt/c/Users/mpurn/IntellijProjects/src/main/resources/out.txt",);
-        //KafkaProducer.kafkaConnect(transactionDTOStringMapOperator);
-        KafkaSink<String> kafkaSink = KafkaProducer.getKafkaSink("localhost:9092", "TOPIC-OUT");
-        transactionDTOStringMapOperator.sinkTo(kafkaSink);
+//        DataStream<TransactionDTO> transactionDTODataSet = jsonDataStream.map(Test::convertToTransactionPojo)
+//                .map(Test::convertToDTOClass);
+//        transactionDTODataSet.print();
+//        DataStream<Integer> map = transactionDTODataSet.map(e -> e.getAge());
+//        map.print();
+//        DataStream<String> transactionDTOStringMapOperator= transactionDTODataSet.map(Test::convertObjToJsonString);
+//        KafkaSink<String> kafkaSink = KafkaProducer.getKafkaSink("localhost:9092", "TOPIC-OUT");
+//        transactionDTOStringMapOperator.sinkTo(kafkaSink);
         env.execute("test");
         //txnDtoDS.writeAsCsv("file:///mnt/c/Users/anshm/IntellijProjects/flinkTest/sampleDto.csv");
-
-//        DataSet<String> txnDtoJson = txnDtoDS.map(ele -> convertObjToJson(ele));
-//        DataSet<String> txnDtoCsv = txnDtoDS.map()
-
-//        DataSet<String> transformedJson = jsonDataset.map(ele -> transform(ele));
-
-//        transformedJson.print();
 
     }
 
