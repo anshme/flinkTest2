@@ -9,7 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c433bd24-47f4-466f-9c9b-6eebab3d36e9" name="Changes" comment="">
+    <list default="true" id="c433bd24-47f4-466f-9c9b-6eebab3d36e9" name="Changes" comment="code changed to stream API, and writing the datastream to text. next steps we need to integrate with kafka">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/KafkaProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/UnTargz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sample.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/flinkTest2_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/flinkTest2_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Test.java" afterDir="false" />
@@ -29,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="kafkaIntigration" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,21 +43,24 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2KdLjZ039jGPG9wwu352Uk3nu0o" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/anshm/.m2/repository/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar",
+    "last_opened_file_path": "C:/Users/mpurn/.m2/repository/org/apache/kafka/kafka-clients/3.2.3/kafka-clients-3.2.3.jar",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.445977",
-    "settings.editor.selected.configurable": "editor.preferences.completion"
+    "project.structure.side.proportion": "0.36800784",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -89,6 +97,14 @@
       <option name="presentableId" value="Default" />
       <updated>1674299651520</updated>
     </task>
+    <task id="LOCAL-00001" summary="code changed to stream API, and writing the datastream to text. next steps we need to integrate with kafka">
+      <created>1674341277458</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674341277458</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,5 +117,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="code changed to stream API, and writing the datastream to text. next steps we need to integrate with kafka" />
+    <option name="LAST_COMMIT_MESSAGE" value="code changed to stream API, and writing the datastream to text. next steps we need to integrate with kafka" />
   </component>
 </project>

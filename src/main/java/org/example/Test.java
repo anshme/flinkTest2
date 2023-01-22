@@ -13,6 +13,7 @@ import org.apache.flink.api.java.operators.FlatMapOperator;
 import org.apache.flink.api.java.operators.MapOperator;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.connector.file.src.reader.TextLineInputFormat;
+import org.apache.flink.connector.kafka.sink.KafkaSink;
 import org.apache.flink.core.fs.Path;
 import org.apache.flink.shaded.jackson2.org.yaml.snakeyaml.events.StreamEndEvent;
 import org.apache.flink.streaming.api.datastream.DataStream;
@@ -53,7 +54,6 @@ public class Test {
 //        FileSource.forRecordStreamFormat(new TextLineInputFormat(),
 //                "file:////mnt/c/Users/mpurn/IntellijProjects/src/main/resources/sample.json").build();
 
-
         File file= new File("sample.json");
         final FileSource<String> source =
                 FileSource.forRecordStreamFormat(new TextLineInputFormat(),Path.fromLocalFile(file))
@@ -71,13 +71,15 @@ public class Test {
         map.print();
         DataStream<String> transactionDTOStringMapOperator= transactionDTODataSet.map(Test::convertObjToJsonString);
         // write json to tct file
-        transactionDTOStringMapOperator.writeAsText("file:///mnt/c/Users/mpurn/IntellijProjects/src/main/resources/out.txt");
+//        transactionDTOStringMapOperator.writeAsText
+//                ("file:///mnt/c/Users/mpurn/IntellijProjects/src/main/resources/out.txt",);
+        //KafkaProducer.kafkaConnect(transactionDTOStringMapOperator);
+        KafkaSink<String> kafkaSink = KafkaProducer.getKafkaSink("localhost:9092", "TOPIC-OUT");
+        transactionDTOStringMapOperator.sinkTo(kafkaSink);
         env.execute("test");
         //txnDtoDS.writeAsCsv("file:///mnt/c/Users/anshm/IntellijProjects/flinkTest/sampleDto.csv");
 
 //        DataSet<String> txnDtoJson = txnDtoDS.map(ele -> convertObjToJson(ele));
-
-
 //        DataSet<String> txnDtoCsv = txnDtoDS.map()
 
 //        DataSet<String> transformedJson = jsonDataset.map(ele -> transform(ele));
