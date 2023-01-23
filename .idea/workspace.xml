@@ -9,11 +9,225 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c433bd24-47f4-466f-9c9b-6eebab3d36e9" name="Changes" comment="kafka sink is working">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/KafkaConsumer.java" afterDir="false" />
+    <list default="true" id="c433bd24-47f4-466f-9c9b-6eebab3d36e9" name="Changes" comment="reading from json is still in pending">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_YAL001C TFC3 SGDID_S0000001, Chr I from 151170-151101,151010-147598, reverse complement, Verified O" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_NOTICE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_connect-distributed.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_connect-mirror-maker.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_connect-standalone.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-acls.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-broker-api-versions.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-cluster.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-configs.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-console-consumer.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-console-producer.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-consumer-groups.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-consumer-perf-test.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-delegation-tokens.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-delete-records.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-dump-log.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-features.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-get-offsets.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-leader-election.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-log-dirs.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-metadata-quorum.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-metadata-shell.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-mirror-maker.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-producer-perf-test.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-reassign-partitions.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-replica-verification.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-run-class.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-server-start.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-server-stop.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-storage.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-streams-application-reset.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-topics.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-transactions.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-verifiable-consumer.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_kafka-verifiable-producer.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_trogdor.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_connect-distributed.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_connect-standalone.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-acls.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-broker-api-versions.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-configs.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-console-consumer.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-console-producer.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-consumer-groups.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-consumer-perf-test.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-delegation-tokens.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-delete-records.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-dump-log.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-get-offsets.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-leader-election.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-log-dirs.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-metatada-quorum.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-mirror-maker.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-producer-perf-test.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-reassign-partitions.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-replica-verification.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-run-class.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-server-start.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-server-stop.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-storage.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-streams-application-reset.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-topics.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_kafka-transactions.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_zookeeper-server-start.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_zookeeper-server-stop.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_windows_zookeeper-shell.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_zookeeper-security-migration.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_zookeeper-server-start.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_zookeeper-server-stop.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_bin_zookeeper-shell.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_config_connect-console-sink.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_config_connect-console-source.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_config_connect-distributed.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_config_connect-file-sink.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_config_connect-file-source.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_config_connect-log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_config_connect-mirror-maker.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_config_connect-standalone.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_config_consumer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_config_kraft_README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_config_kraft_broker.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_config_kraft_controller.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_config_kraft_server.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_config_log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_config_producer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_config_server.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_config_tools-log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_config_trogdor.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_config_zookeeper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_activation-1.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_aopalliance-repackaged-2.6.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_argparse4j-0.7.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_audience-annotations-0.5.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_commons-cli-1.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_commons-lang3-3.12.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_commons-lang3-3.8.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_connect-api-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_connect-basic-auth-extension-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_connect-file-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_connect-json-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_connect-mirror-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_connect-mirror-client-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_connect-runtime-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_connect-transforms-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_hk2-api-2.6.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_hk2-locator-2.6.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_hk2-utils-2.6.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jackson-annotations-2.13.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jackson-core-2.13.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jackson-databind-2.13.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jackson-dataformat-csv-2.13.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jackson-datatype-jdk8-2.13.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jackson-jaxrs-base-2.13.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jackson-jaxrs-json-provider-2.13.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jackson-module-jaxb-annotations-2.13.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jackson-module-scala_2.13-2.13.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jakarta.activation-api-1.2.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jakarta.annotation-api-1.3.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jakarta.inject-2.6.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jakarta.validation-api-2.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jakarta.ws.rs-api-2.1.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jakarta.xml.bind-api-2.3.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_javassist-3.27.0-GA.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_javax.servlet-api-3.1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_javax.ws.rs-api-2.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jaxb-api-2.3.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jersey-client-2.34.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jersey-common-2.34.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jersey-container-servlet-2.34.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jersey-container-servlet-core-2.34.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jersey-hk2-2.34.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jersey-server-2.34.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jetty-client-9.4.48.v20220622.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jetty-continuation-9.4.48.v20220622.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jetty-http-9.4.48.v20220622.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jetty-io-9.4.48.v20220622.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jetty-security-9.4.48.v20220622.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jetty-server-9.4.48.v20220622.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jetty-servlet-9.4.48.v20220622.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jetty-servlets-9.4.48.v20220622.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jetty-util-9.4.48.v20220622.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jetty-util-ajax-9.4.48.v20220622.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jline-3.21.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jopt-simple-5.0.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_jose4j-0.7.9.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_kafka-clients-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_kafka-log4j-appender-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_kafka-metadata-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_kafka-raft-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_kafka-server-common-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_kafka-shell-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_kafka-storage-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_kafka-storage-api-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_kafka-streams-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_kafka-streams-examples-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_kafka-streams-scala_2.13-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_kafka-streams-test-utils-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_kafka-tools-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_kafka_2.13-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_lz4-java-1.8.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_maven-artifact-3.8.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_metrics-core-2.2.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_metrics-core-4.1.12.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_netty-buffer-4.1.78.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_netty-codec-4.1.78.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_netty-common-4.1.78.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_netty-handler-4.1.78.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_netty-resolver-4.1.78.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_netty-transport-4.1.78.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_netty-transport-classes-epoll-4.1.78.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_netty-transport-native-epoll-4.1.78.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_netty-transport-native-unix-common-4.1.78.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_osgi-resource-locator-1.0.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_paranamer-2.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_plexus-utils-3.3.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_reflections-0.9.12.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_reload4j-1.2.19.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_rocksdbjni-6.29.4.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_scala-collection-compat_2.13-2.6.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_scala-java8-compat_2.13-1.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_scala-library-2.13.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_scala-logging_2.13-3.9.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_scala-reflect-2.13.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_slf4j-api-1.7.36.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_slf4j-reload4j-1.7.36.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_snappy-java-1.1.8.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_swagger-annotations-2.2.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_trogdor-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_zookeeper-3.6.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_zookeeper-jute-3.6.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_libs_zstd-jni-1.5.2-1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_licenses_CDDL+GPL-1.1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_licenses_DWTFYWTPL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_licenses_argparse-MIT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_licenses_classgraph-MIT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_licenses_eclipse-distribution-license-1.0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_licenses_eclipse-public-license-2.0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_licenses_jline-BSD-3-clause" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_licenses_jopt-simple-MIT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_licenses_paranamer-BSD-3-clause" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_licenses_slf4j-MIT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_licenses_zstd-jni-BSD-2-clause" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka_2.13-3.3.1_site-docs_kafka_2.13-3.3.1-site-docs.tgz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/allKafkaMessages.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/ReadAndWriteFiles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/TransactionStreamingLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/flinkTest2_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/flinkTest2_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/KafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/kafka/KafkaConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/KafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/kafka/KafkaProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Payer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Payer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sample.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TransactionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modeldto/TransactionDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UnTargz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UnTargz.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,13 +244,16 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="implementKafkaSink" />
+        <entry key="$PROJECT_DIR$" value="unzipTarFile" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2KdLjZ039jGPG9wwu352Uk3nu0o" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -52,7 +269,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/mpurn/.m2/repository/org/apache/kafka/kafka-clients/3.2.3/kafka-clients-3.2.3.jar",
+    "last_opened_file_path": "C:/Users/mpurn/Downloads/json-20220924.jar",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.36800784",
@@ -64,13 +281,26 @@
       <recent name="C:\Users\anshm\IntellijProjects\flinkTest2\src\main\java\org\example" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.UnTargz">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Test" />
       <module name="flinkTest2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.kafka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UnTargz" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.UnTargz" />
+      <module name="flinkTest2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.kafka.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -80,6 +310,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UnTargz" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.UnTargz" />
         <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
@@ -107,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674362543947</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="reading from json is still in pending">
+      <created>1674366183106</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674366183106</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -125,6 +366,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="code changed to stream API, and writing the datastream to text. next steps we need to integrate with kafka" />
     <MESSAGE value="kafka sink is working" />
-    <option name="LAST_COMMIT_MESSAGE" value="kafka sink is working" />
+    <MESSAGE value="reading from json is still in pending" />
+    <option name="LAST_COMMIT_MESSAGE" value="reading from json is still in pending" />
   </component>
 </project>
